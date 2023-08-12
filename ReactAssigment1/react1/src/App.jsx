@@ -12,10 +12,13 @@ function App() {
 
   return (
     <>
-      <Header text="This mypage"/>
+      <div className='app'> 
+       <Header text="This mypage"/>
       <Person name="Amit" age="26" />
       <Button text="clickme" onClick={onclick} />
       <List hobby={['liten music ', 'Coding', 'playing foootball']} />
+      </div>
+
     </>
   )
 }
