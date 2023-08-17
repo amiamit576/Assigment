@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Key Events Example</h1>
+    <p>Press and release a key to see the events in action:</p>
+    <p>Status: <span id="status">No key pressed</span></p>
+
+    <script>
+        const statusElement = document.getElementById("status");
+
+        document.addEventListener("keydown", (event) => {
+            statusElement.textContent = `Key pressed: ${event.key}`;
+            statusElement.style.color = "blue";
+        });
+
+        document.addEventListener("keyup", () => {
+            statusElement.textContent = "No key pressed";
+            statusElement.style.color = "black";
+        });
+    </script>
+</body>
+</html>
